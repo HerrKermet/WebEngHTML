@@ -1,0 +1,35 @@
+p{
+  color: blue;
+}
+
+div > p{
+  color: olivedrab;
+}
+
+div{
+  margin:20px;
+  padding: 10px;
+  border-style: dotted dashed dotted dashed;
+  border-color: lightskyblue;
+  background-color: lightblue;
+}
+
+ul{
+  display: flex;
+
+
+}
+li{
+  padding: 5px;
+  margin: 50px;
+  border-style: solid double solid double;
+  border-color: black;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-areas: "1 1 1"
+                       "2 2 3"
+                       "2 2 3";
+
+}
