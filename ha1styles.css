@@ -1,0 +1,54 @@
+header, nav, #sidebar, #maincontent, footer{
+  background-color: #aaa;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+header{
+  grid-area: head;
+}
+
+nav{
+  grid-area: nav;
+  justify-content: space-between;
+}
+
+#sidebar{
+  grid-area: sidebar;
+}
+
+#maincontent{
+  grid-area: main;
+}
+
+footer{
+  grid-area: foot;
+}
+
+#wrapper {
+  display:grid;
+  grid-gap: 8px;
+  grid-template-areas:
+    "head"
+    "nav"
+    "main"
+    "sidebar"
+    "foot";
+}
+
+@media (min-width: 800px){
+  #wrapper {
+
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 8px;
+    grid-template-areas:
+    "head head "
+    "nav nav "
+    "sidebar main "
+    "foot foot ";
+  }
+  nav{
+    display: flex;
+  }
+}
