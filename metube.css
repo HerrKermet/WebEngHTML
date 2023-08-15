@@ -1,0 +1,75 @@
+html{
+  background-color: #222222;
+}
+
+body{
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "main sidebar"
+    "description sidebar"
+    "comments sidebar";
+
+  grid-template-columns: auto 20%;
+}
+
+
+
+#maincontent{
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  border-style: solid;
+}
+
+#maincontent img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+#description{
+  grid-area: description;
+  border-bottom: black;
+  border-radius: 10px;
+}
+
+#sidebar{
+  grid-area: sidebar;
+}
+
+#sidebar > div{
+  border-style: solid;
+  border-radius: 5px;
+  margin: 10px;
+  padding-left: 5px;
+}
+
+header{
+  grid-area: head;
+}
+
+#comments{
+  grid-area: comments;
+}
+
+#desccommentwrapper {
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #222222;
+  margin-top: 20px;
+}
+
+header > p{
+  padding-left: 30%;
+  font-size: xxx-large;
+  color: white;
+}
+
+#comments > p, #description > p{
+  font-size: large;
+  color: white;
+}
